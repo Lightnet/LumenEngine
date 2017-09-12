@@ -8,3 +8,4 @@ build/*
 *.ppm
 imgui.ini
 
+sh.exe.stackdump
