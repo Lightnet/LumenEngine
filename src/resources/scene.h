@@ -14,7 +14,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include <cuda_runtime.h>
+//#include <cuda_runtime.h>
 
 #include "object.h"
 

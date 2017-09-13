@@ -11,8 +11,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include <cuda_runtime.h>
-#include "cuda_gl_interop.h"
+//#include <cuda_runtime.h>
+//#include "cuda_gl_interop.h"
 
 #include "renderKernel.h"
 #include "gui.h"
@@ -27,8 +27,8 @@ class Renderer
         int runRenderer();
         void initCUDAData();
         void cleanCUDAData();
-        void initRenderVBO(GLuint* renderVBO, cudaGraphicsResource** cudaGRBuffer, unsigned int cudaFlags);
-        void cleanRenderVBO(GLuint* renderVBO, cudaGraphicsResource* cudaGRBuffer);
+        void initRenderVBO(GLuint* renderVBO, GLuint** cudaGRBuffer, unsigned int cudaFlags);
+        void cleanRenderVBO(GLuint* renderVBO, GLuint* cudaGRBuffer);
         void initCUDAScene();
         void cleanCUDAScene();
         void resetRender();
@@ -61,9 +61,9 @@ class Renderer
 
         SphereObject* spheresList;
 
-        cudaGraphicsResource* cudaGRBuffer;
+        GLuint* cudaGRBuffer;
 
-        cudaStream_t cudaDataStream;
+        GLuint cudaDataStream;
 
         GLFWwindow* window;
 

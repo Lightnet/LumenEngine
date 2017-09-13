@@ -1,11 +1,16 @@
 # Folders
 
 build/*
+bin/
 
 # Files
 
 *.user
 *.ppm
+*.pyc
 imgui.ini
 
+api/**/*.obj
+src/**/*.obj
 sh.exe.stackdump
+.sconsign.dblite
